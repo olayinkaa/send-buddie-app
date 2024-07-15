@@ -1,0 +1,99 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --form-container-w: 318.17px;
+        --form-container-h: 308px;
+        --receipt-topup-w: 406px;
+        --receipt-topup-h: 264.4px;
+        /* --intro-h: 337.45px; */
+        --intro-h: 550px;
+        --text-title: 20.4px;
+        --text-title2: 13.33px;
+        /** ----color-------*/
+        --primary: 
+    }
+}
+
+@layer base {
+    body {
+        @apply text-gray-600;
+    }
+
+    [type="text"],
+    [type="email"],
+    [type="password"],
+    [type="number"],
+    [type="date"],
+    [type="tel"],
+    textarea,
+    select {
+        @apply block w-full rounded-md border border-gray-400
+    	p-2 text-base shadow-sm outline-none transition 
+		focus:ring-0 hover:duration-1000
+    	dark:bg-transparent dark:text-slate-300;
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type="checkbox"] {
+        @apply h-6 w-6 rounded focus:ring-0 hover:cursor-pointer;
+    }
+}
+
+@layer components {
+    .primary-light-container {
+        background-color: #ffffff;
+        background-image: url("../assets/svgs/intro-circles2.svg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center var(--intro-h);
+    }
+    .primary-dark-container {
+        background-color: #ffffff;
+        background-image: url("../assets/svgs/intro-circles.svg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center var(--intro-h);
+    }
+    .btn {
+        @apply rounded-md py-3 px-4 text-white;
+    }
+    .btn-primary {
+        @apply btn bg-blue-brand hover:bg-opacity-90;
+    }
+    .btn-danger {
+        @apply btn bg-red-500;
+    }
+    .btn-white {
+        @apply btn bg-white text-blue-500;
+    }
+
+    .navbar-side-drawer {
+        @apply fixed top-0 z-[100] h-screen w-[300px] bg-neutral-50 bg-opacity-90 duration-1000;
+    }
+
+    .input-label {
+        @apply mb-1 flex text-base text-slate-400 dark:text-white;
+    }
+
+    .input-control {
+        @apply focus:ring-1 focus:ring-blue-brand
+        dark:ring-1;
+    }
+}
+
+body {
+    @apply dark:bg-dark-brand;
+}
+
+.test {
+    @apply !bg-red-400 md:!bg-green-200 lg:!bg-blue-400;
+}

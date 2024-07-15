@@ -1,0 +1,16 @@
+version: '3'
+services:
+  react-app:
+    stdin_open: true
+    tty: true
+    build: .
+    image: sendbuddie-image
+    container_name: sendbuddie-app
+    ports:
+      - "4006:4006"
+    volumes:
+      - ./src:/app/src:ro
+    environment:
+      - REACT_APP_NAME="sendbuddie"
+    # env_file:
+    #   - ./.env
